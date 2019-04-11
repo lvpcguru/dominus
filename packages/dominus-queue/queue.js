@@ -20,6 +20,8 @@ Queues = {
 if (!Meteor.settings.public.dominusIsDev) {
   Queues.settings.host = process.env.DOMINUS_REDIS_HOST;
   Queues.settings.port = process.env.DOMINUS_REDIS_PORT;
+
+  Queues.settings.password = process.env.DOMINUS_REDIS_PASSWORD;
   Queues.settings.options = {no_ready_check: true};
 }
 
